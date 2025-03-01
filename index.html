@@ -15,16 +15,17 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="bg-[#f4f7ff] h-lvh font-poppins">
+<body class="bg-[#f4f7ff] h-lvh font-poppins bg_change">
   <header class="container mx-auto pt-1">
-    <nav class="mt-8 rounded-2xl bg-white text-gray-800 p-4 mb-4">
+    <nav class="mt-1 rounded-2xl bg-white text-gray-800 p-4 mb-4">
       <div class="flex justify-between items-center">
-        <a href="#" class="flex align-center text-2xl font-bold"><img src="assets/Group 2.png" alt=""></a>
+        <a href="#" class="flex items-center text-2xl"><img class="mr-4" src="assets/logo.png" alt="">Dev<span
+            class="text-2xl font-bold">Board</span></a>
         <ul class="flex space-x-4">
-          <li class="flex bg-[#F4F7FF] p-4 rounded-3xl "><img src="assets/Group.png" alt="Colour Theme option"><span
-              class="ml-2 font-bold  text-4xl">23</span></li>
-          <li class="bg-[#F4F7FF] p-3 rounded-full "><button href="#" class="hover:text-gray-300"><img
-                src="assets/Group 8.png" alt="Colour Theme option"></button>
+          <li class="flex bg-[#F4F7FF] p-4 rounded-3xl "><img src="assets/checkbox.png" alt="Colour Theme option"><span
+              class="ml-2 font-bold text-2xl sm:text-2xl md:text-4xl">23</span></li>
+          <li class="bg-[#F4F7FF] p-3 rounded-full "><button onclick="cBColor()" href="#"
+              class="hover:text-gray-300"><img src="assets/theme-btn.png" alt="Colour Theme option"></button>
           </li>
         </ul>
       </div>
@@ -36,31 +37,31 @@
           <div class="col-span-1 bg-[#F4F7FF] p-4 rounded-2xl">
             <div class="flex">
               <div class="rounded-full bg-white px-3 py-2 content-center">
-                <img src="assets/fi-sr-calendar.png" alt="">
+                <img src="assets/calender.png" alt="">
 
               </div>
-              <div class="ml-6 text-[#00303C]">
+              <div class="mt-2 ml-6 text-[#00303C]">
                 <h3 class="font-normal">Task Assigned </h3>
                 <h3 class="font-bold">05</h3>
               </div>
             </div>
           </div>
-          <div class="col-span-2 bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] p-4 rounded-2xl">
-            <div class="flex items
+          <div class="col-span-2 bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] p-4 rounded-2xl"><a href="blogs.html">
+              <div class="flex items
                           -center text-white">
-              <img src="assets/fi_18577309.png" alt="Project Icon">
-              <h3 class="font-semibold">Discover Something <br> New Today!</h3>
-            </div>
+                <img src="assets/board.png" alt="Project Icon">
+                <h3 class="mt-4 font-semibold">Discover Something New Today!</h3>
+              </div>
+            </a>
           </div>
           <div class="col-span-1 bg-[#F4F7FF] p-4 rounded-2xl">
             <div class="flex">
               <div class="rounded-full bg-white px-3 py-2 content-center">
-                <img src="assets/fi-sr-calendar.png" alt=" Project Icon">
+                <img src="assets/calender.png" alt=" Project Icon">
 
               </div>
-              <div class="ml-6 text-[#00303C]">
-                <h3 class="font-normal">Wed ,</h3>
-                <h3 class="font-bold">Jul 28 2025</h3>
+              <div class="mt-2 ml-6 text-[#00303C]">
+                <h3 id="date" class="font-normal">Wed ,</h3>
               </div>
             </div>
           </div>
@@ -76,74 +77,80 @@
                 <span class="">Deadline</span>
                 <h3 class="font-normal text-[#00303C]">21 March 2025 </h3>
               </div>
-              <button class="btn bg-[#3752FD] border-none outline-none text-white font-bold">Completed</>
+              <button id="Complete" onclick="showAlert()"
+                class="btn bg-[#3752FD] border-none outline-none text-white font-bold">Complete</>
             </div>
           </div>
           <div class="bg-[#F4F7FF] p-4 rounded-2xl text-[#00303C]">
-            <span class="rounded-xl bg-white px-2 py-2  content-center">ShopEase</span>
-            <h2 class="my-3 font-medium font-width-[24px]">Fix Mobile Button Issue</h2>
-            <p class="my-3 rounded-xl bg-white p-1 content-center">Debug using Chrome DevTools, check for
-              overlapping</p>
+            <span class="rounded-xl bg-white px-2 py-2  content-center">CloudSync</span>
+            <h2 class="my-3 font-medium font-width-[24px]">Add Dark Mode</h2>
+            <p class="my-3 rounded-xl bg-white p-1 content-center">Store the user's preference in localStorage, update
+              CSS variables dynamically,</p>
             <div class="flex justify-between border-t-2 border-dashed border-[#3752FD] p-4">
               <div class="text-[#00303C]">
                 <span class="">Deadline</span>
                 <h3 class="font-normal text-[#00303C]">21 March 2025 </h3>
               </div>
-              <button class="btn bg-[#3752FD] border-none outline-none text-white font-bold">Completed</>
+              <button onclick="showAlert()"
+                class="btn bg-[#3752FD] border-none outline-none text-white font-bold">Complete</>
             </div>
           </div>
           <div class="bg-[#F4F7FF] p-4 rounded-2xl text-[#00303C]">
-            <span class="rounded-xl bg-white px-2 py-2  content-center">ShopEase</span>
-            <h2 class="my-3 font-medium font-width-[24px]">Fix Mobile Button Issue</h2>
-            <p class="my-3 rounded-xl bg-white p-1 content-center">Debug using Chrome DevTools, check for
-              overlapping</p>
+            <span class="rounded-xl bg-white px-2 py-2  content-center">SwiftPay</span>
+            <h2 class="my-3 font-medium font-width-[24px]">Optimize Home page</h2>
+            <p class="my-3 rounded-xl bg-white p-1 content-center">Debug using Chrome DevTools, check for overlapping
+              elements,</p>
             <div class="flex justify-between border-t-2 border-dashed border-[#3752FD] p-4">
               <div class="text-[#00303C]">
                 <span class="">Deadline</span>
                 <h3 class="font-normal text-[#00303C]">21 March 2025 </h3>
               </div>
-              <button class="btn bg-[#3752FD] border-none outline-none text-white font-bold">Completed</>
+              <button onclick="showAlert()"
+                class="btn bg-[#3752FD] border-none outline-none text-white font-bold">Complete</>
             </div>
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8">
           <div class="bg-[#F4F7FF] p-4 rounded-2xl text-[#00303C]">
-            <span class="rounded-xl bg-white px-2 py-2  content-center">ShopEase</span>
-            <h2 class="my-3 font-medium font-width-[24px]">Fix Mobile Button Issue</h2>
-            <p class="my-3 rounded-xl bg-white p-1 content-center">Debug using Chrome DevTools, check for
-              overlapping</p>
+            <span class="rounded-xl bg-white px-2 py-2  content-center">Meta</span>
+            <h2 class="my-3 font-medium font-width-[24px]">Add new emoji 🤲</h2>
+            <p class="my-3 rounded-xl bg-white p-1 content-center">Debug using Chrome DevTools, check for overlapping
+              elements, and ensure onClick works properly</p>
             <div class="flex justify-between border-t-2 border-dashed border-[#3752FD] p-4">
               <div class="text-[#00303C]">
                 <span class="">Deadline</span>
                 <h3 class="font-normal text-[#00303C]">21 March 2025 </h3>
               </div>
-              <button class="btn bg-[#3752FD] border-none outline-none text-white font-bold">Completed</>
+              <button onclick="showAlert()"
+                class="btn bg-[#3752FD] border-none outline-none text-white font-bold">Complete</>
             </div>
           </div>
           <div class="bg-[#F4F7FF] p-4 rounded-2xl text-[#00303C]">
-            <span class="rounded-xl bg-white px-2 py-2  content-center">ShopEase</span>
-            <h2 class="my-3 font-medium font-width-[24px]">Fix Mobile Button Issue</h2>
-            <p class="my-3 rounded-xl bg-white p-1 content-center">Debug using Chrome DevTools, check for
-              overlapping</p>
+            <span class="rounded-xl bg-white px-2 py-2  content-center">Google LLC</span>
+            <h2 class="my-3 font-medium font-width-[24px]">Integrate OpenAI API</h2>
+            <p class="my-3 rounded-xl bg-white p-1 content-center">Debug using Chrome DevTools, check for overlapping
+              elements,</p>
             <div class="flex justify-between border-t-2 border-dashed border-[#3752FD] p-4">
               <div class="text-[#00303C]">
                 <span class="">Deadline</span>
                 <h3 class="font-normal text-[#00303C]">21 March 2025 </h3>
               </div>
-              <button class="btn bg-[#3752FD] border-none outline-none text-white font-bold">Completed</>
+              <button onclick="showAlert()"
+                class="btn bg-[#3752FD] border-none outline-none text-white font-bold">Complete</>
             </div>
           </div>
           <div class="bg-[#F4F7FF] p-4 rounded-2xl text-[#00303C]">
-            <span class="rounded-xl bg-white px-2 py-2  content-center">ShopEase</span>
-            <h2 class="my-3 font-medium font-width-[24px]">Fix Mobile Button Issue</h2>
-            <p class="my-3 rounded-xl bg-white p-1 content-center">Debug using Chrome DevTools, check for
-              overlapping</p>
+            <span class="rounded-xl bg-white px-2 py-2  content-center">Glassdoar</span>
+            <h2 class="my-3 font-medium font-width-[24px]">Improve Job searching</h2>
+            <p class="my-3 rounded-xl bg-white p-1 content-center">Debug using Chrome DevTools, check for overlapping
+              elements,</p>
             <div class="flex justify-between border-t-2 border-dashed border-[#3752FD] p-4">
               <div class="text-[#00303C]">
                 <span class="">Deadline</span>
                 <h3 class="font-normal text-[#00303C]">21 March 2025 </h3>
               </div>
-              <button class="btn bg-[#3752FD] border-none outline-none text-white font-bold">Completed</>
+              <button onclick="showAlert()"
+                class="btn bg-[#3752FD] border-none outline-none text-white font-bold">Complete</>
             </div>
           </div>
         </div>
@@ -152,7 +159,7 @@
       <aside class="flex-end bg-white w-[30%] rounded-2xl ">
         <div class="flex align-center justify-center flex-wrap p-4">
           <div class="w-6">
-            <img src="assets/fi-sr-time-past.png" alt="">
+            <img src="assets/activity.png" alt="">
           </div>
           <h3 class="ml-3 lg:text-2xl font-bold text-[#00303C]">Activity Log</h3>
         </div>
@@ -169,7 +176,7 @@
       </aside>
     </section>
   </header>
-
+  <script src="app.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
