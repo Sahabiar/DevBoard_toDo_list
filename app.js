@@ -13,21 +13,15 @@
   }
 setInterval(updateClock, 1000);
 
-function addTask() {
-  const count = 5;
-  const completebtns = document.querySelectorAll('.outline-none');
-if (completebtns.length < count) {
-  // Add more elements to the completebtns array
 
-}
+const completebtns = document.querySelectorAll('.outline-none');
+
 for (let i = 0; i < completebtns.length; i++) {
   completebtns[i].addEventListener('click', function (event) {
     this.parentNode.style.textDecoration = 'line-through';
     event.target.disabled = true;
   });
 }
-}
-
 
 function cBColor() {
   // Generate a random hex color
@@ -56,14 +50,7 @@ function clearDivHistory(divId) {
     console.log(`History of div with ID '${divId}' cleared.`);
 
   } else {
+
     console.error(`Div with ID '${divId}' not found.`);
   }
-}
-
-function addfinished() {
-  const newDiv = document.createElement('div');
-  newDiv.className = 'finished';
-  newDiv.innerHTML = 'Finished';
-  const finishedDiv = document.getElementById('finished');
-  finishedDiv.appendChild(newDiv);
 }
